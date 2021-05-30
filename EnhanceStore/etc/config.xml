@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <abhay>
+            <general>
+                <enable>1</enable>
+                <sp>
+                    <sp_enable>1</sp_enable>
+                </sp>
+                <gp>
+                    <gp_enable>1</gp_enable>
+                </gp>
+                <cp>
+                    <cp_enable>1</cp_enable>
+                </cp>
+            </general>
+        </abhay>
+    </default>
+</config>

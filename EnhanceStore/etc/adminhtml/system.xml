@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="abhay" translate="label" sortOrder="1">
+            <label>Abhay</label>
+        </tab>
+        <section id="abhay" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Enhance Store Package</label>
+            <tab>abhay</tab>
+            <resource>Abhay_EnhanceStore::system_config</resource>
+            <group id="abhay" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+              <frontend_model>Abhay\EnhanceStore\Block\Adminhtml\System\Config\Fieldset\Abhay</frontend_model>
+            </group>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Settings</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Select <strong>YES</strong> to Enable All the configuration.]]></comment>
+                </field>
+                <group id="sp" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Simple Product</label>
+                    <field id="sp_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Enable For Simple Product</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <comment><![CDATA[Select <strong>YES</strong> to set all the configuration for <strong>Simple Product</strong>.]]></comment>
+                    </field>
+                    <field id="sp_salable_qty" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>To show stock Quantity</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="sp_enable">1</field>
+                        </depends>
+                    </field>
+                </group>
+                <group id="gp" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Group Product</label>
+                    <field id="gp_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Enable For Group Product</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <comment><![CDATA[Select <strong>YES</strong> to set all the configuration for <strong>Group Product</strong>.]]></comment>
+                    </field>
+                    <field id="gp_child_sku" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>To show Child Product SKU</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="gp_enable">1</field>
+                        </depends>
+                    </field>
+                    <field id="gp_salable_qty" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>To show stock Quantity</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="gp_enable">1</field>
+                        </depends>
+                    </field>
+                </group>
+                <group id="cp" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Configurable Product</label>
+                    <field id="cp_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Enable For Configurable Product</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <comment><![CDATA[Select <strong>YES</strong> to set all the configuration for <strong>Configurable Product</strong>.]]></comment>
+                    </field>
+                    <field id="cp_min_max_price" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>To Show MIN and MAX Price</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="cp_enable">1</field>
+                        </depends>
+                        <comment><![CDATA[Select <strong>YES</strong> to show Minimum and Maximum Price of Configurable Product.]]></comment>
+                    </field>
+                
+                </group>
+            </group>
+        </section>
+    </system>
+</config>
